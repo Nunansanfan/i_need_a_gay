@@ -6,7 +6,7 @@ from contextlib import contextmanager
 
 # try:
 # from databricks.connect import DatabricksSession
-# from databricks.sdk import WorkspaceClient
+from databricks.sdk import WorkspaceClient
 from pyspark.sql import SparkSession
 import pytest
 import json
@@ -88,7 +88,7 @@ def pytest_configure(config: pytest.Config):
         # Initialize Spark session eagerly, so it is available even when
         # SparkSession.builder.getOrCreate() is used. For DB Connect 15+,
         # we validate version compatibility with the remote cluster.
-        if hasattr(DatabricksSession.builder, "validateSession"):
-            DatabricksSession.builder.validateSession().getOrCreate()
-        else:
-            DatabricksSession.builder.getOrCreate()
+        # if hasattr(DatabricksSession.builder, "validateSession"):
+        #     DatabricksSession.builder.validateSession().getOrCreate()
+        # else:
+        #     DatabricksSession.builder.getOrCreate()
