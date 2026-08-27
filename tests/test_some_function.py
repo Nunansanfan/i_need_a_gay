@@ -1,4 +1,4 @@
-import some_function
+import src.some_function
 
 def test_plus():
     assert some_function.add(1, 2)==3
