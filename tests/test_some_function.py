@@ -1,7 +1,7 @@
-import src.some_function
+from some_function import add, minus
 
 def test_plus():
-    assert some_function.add(1, 2)==3
+    assert add(1, 2)==3
 
 def test_minus():
-    assert some_function.minus(2, 1)==1
+    assert minus(2, 1)==1
